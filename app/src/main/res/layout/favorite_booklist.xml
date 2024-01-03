@@ -34,21 +34,6 @@
         android:textSize="17sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/authors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bookname"
-        android:layout_alignEnd="@+id/imageView"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="-58dp"
-        android:gravity="bottom"
-        android:maxLines="1"
-        android:text="Authors"
-        android:textSize="14sp"
-        android:textStyle="italic" />
-
     <ImageView
         android:id="@+id/favorite"
         android:layout_width="25dp"
@@ -56,22 +41,21 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        app:srcCompat="@drawable/star_outline_24"
+        app:srcCompat="@drawable/favorite_24"
         android:contentDescription="@string/favourite_img" />
-
 
     <ImageView
         android:id="@+id/iconlocation"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_below="@+id/authors"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="1dp"
+        android:layout_below="@+id/bookname"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:layout_toEndOf="@+id/imageView"
-        android:contentDescription="@string/location_icon"
         android:scaleType="fitCenter"
-        android:src="@drawable/location_on_24" />
+        android:src="@drawable/location_on_24"
+        android:contentDescription="@string/location_icon" />
 
     <TextView
         android:id="@+id/location"
@@ -79,10 +63,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/iconlocation"
         android:layout_alignStart="@+id/iconlocation"
-        android:layout_alignEnd="@+id/authors"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="-23dp"
-        android:layout_marginEnd="-25dp"
+        android:layout_alignEnd="@+id/bookname"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="-22dp"
+        android:layout_marginEnd="-23dp"
         android:gravity="bottom"
         android:maxLines="1"
         android:text="@string/city"
@@ -95,8 +79,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/bookname"
         android:layout_alignStart="@+id/bookname"
-        android:layout_marginStart="-1dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="34dp"
         android:maxLines="1"
         android:text="@string/price"
         android:textColor="@color/theme"

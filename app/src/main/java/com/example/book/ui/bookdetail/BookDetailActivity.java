@@ -89,7 +89,7 @@ public class BookDetailActivity extends AppCompatActivity {
         binding.offerButtonBook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("offered", "offer button cliecked");
+                Log.e("offered", "offer button clicked");
                 showOfferedDialogue();
             }
         });

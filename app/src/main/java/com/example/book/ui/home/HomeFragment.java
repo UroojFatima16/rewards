@@ -86,6 +86,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
+
         SearchView searchView = root.findViewById(R.id.searchView);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -158,7 +159,9 @@ public class HomeFragment extends Fragment {
 
         if (books != null) {
             for (Post book : books) {
-                if (book.getBookName().toLowerCase().contains(query.toLowerCase())) {
+                // Check if book title or authors contain the query
+                if (book.getBookName().toLowerCase().contains(query.toLowerCase()) ||
+                        containsAuthor(book.getAuthors(), query.toLowerCase())) {
                     filteredList.add(book);
                 }
             }
@@ -166,6 +169,18 @@ public class HomeFragment extends Fragment {
 
         return filteredList;
     }
+
+    private boolean containsAuthor(List<String> authors, String query) {
+        if (authors != null) {
+            for (String author : authors) {
+                if (author.toLowerCase().contains(query)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
